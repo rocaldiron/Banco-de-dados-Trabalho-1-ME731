@@ -1,1 +1,3 @@
 # Banco-de-dados-Trabalho-1-ME731
+
+O banco de dados é constituído pelas quatro planilhas, pois não haviam todos os jogos em um único arquivo. No fim, foi feito um rbind nos quatro arquivos csv, e para evitar que tivessem linhas repetidas, utilizei a função unique. Houve um cuidado para filtrar os jogos oficiais dos jogadores, uma vez que Split Name assumia valores como "1st-half", "2st-half", "all", e "game". Foi filtrado Split Name == "game" para garantir que as estatísticas só se referiam aos dois tempos regulamentares, pois Split Name == "all" apresenta informações desde a chegada do vestiário, hino nacional, fim do jogo, etc. Jogos treino são mais fáceis de filtrar pois a variável Tags assume dois valores: game ou training, basta filtrar por training.
